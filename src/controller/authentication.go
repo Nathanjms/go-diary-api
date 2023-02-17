@@ -1,15 +1,20 @@
 package controller
 
 import (
-	"diary_api/helper"
-	"diary_api/model"
+	"diary_api/src/helper"
+	"diary_api/src/model"
 	"net/http"
 
 	"github.com/gin-gonic/gin"
 )
 
+type authenticationInput struct {
+	Username string `json:"username" binding:"required"`
+	Password string `json:"password" binding:"required"`
+}
+
 func Register(context *gin.Context) {
-	var input model.AuthenticationInput
+	var input authenticationInput
 
 	if err := context.ShouldBindJSON(&input); err != nil {
 		context.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
@@ -32,7 +37,7 @@ func Register(context *gin.Context) {
 }
 
 func Login(context *gin.Context) {
-	var input model.AuthenticationInput
+	var input authenticationInput
 
 	if err := context.ShouldBindJSON(&input); err != nil {
 		context.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})

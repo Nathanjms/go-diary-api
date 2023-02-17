@@ -1,7 +1,7 @@
 package helper
 
 import (
-	"diary_api/model"
+	"diary_api/src/model"
 	"errors"
 	"fmt"
 	"os"

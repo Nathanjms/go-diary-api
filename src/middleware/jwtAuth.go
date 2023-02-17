@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"diary_api/helper"
+	"diary_api/src/helper"
 	"net/http"
 
 	"github.com/gin-gonic/gin"

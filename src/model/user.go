@@ -1,7 +1,7 @@
 package model
 
 import (
-	"diary_api/database"
+	"diary_api/src/database"
 	"html"
 	"strings"
 

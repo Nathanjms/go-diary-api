@@ -1,9 +1,9 @@
 package main
 
 import (
-	"diary_api/controller"
-	"diary_api/database"
-	"diary_api/model"
+	"diary_api/src/controller"
+	"diary_api/src/database"
+	"diary_api/src/model"
 	"fmt"
 	"log"
 
